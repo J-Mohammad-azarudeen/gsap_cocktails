@@ -36,7 +36,7 @@ const Hero = () => {
       delay:1
     })
 
-    gsap.timeline({
+   const t1= gsap.timeline({
       scrollTrigger:{
         trigger:'#hero',
         start:'top top',
@@ -44,8 +44,8 @@ const Hero = () => {
         scrub:1,
       }
     })
-    .to('.right-leaf',{x:200},0)
-    .to('.left-leaf',{x:-200},0)
+    t1.to('.right-leaf',{x:200},0)
+    t1.to('.left-leaf',{x:-200},0)
 
     const startValue = isMobile ? 'top 50%' : 'center 60%';
     const endValue = isMobile ? '120% top' : 'bottom top';
